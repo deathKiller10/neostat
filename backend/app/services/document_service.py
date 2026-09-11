@@ -61,17 +61,28 @@ class DocumentService:
         file_validation = validate_upload(content, filename, self.settings)
         logger.info(
             "file_validation_result",
-            extra={"document_filename": filename, "status": file_validation.status, "page_count": file_validation.page_count},
+            extra={
+                "document_filename": filename,
+                "status": file_validation.status,
+                "page_count": file_validation.page_count,
+            },
         )
 
         pages = prepare_pages(content, file_validation.file_type, self.ocr_provider)
         logger.info(
             "pages_prepared",
-            extra={"document_filename": filename, "page_count": len(pages), "sources": [p.text_source for p in pages]},
+            extra={
+                "document_filename": filename,
+                "page_count": len(pages),
+                "sources": [p.text_source for p in pages],
+            },
         )
 
         extracted_data, overall_confidence = extract(pages, document_type, self.llm_provider)
-        logger.info("extraction_completed", extra={"document_filename": filename, "overall_confidence": overall_confidence})
+        logger.info(
+            "extraction_completed",
+            extra={"document_filename": filename, "overall_confidence": overall_confidence},
+        )
 
         validation = financial_checks.validate(
             extracted_data, document_type, self.settings.validation_abs_tol, self.settings.validation_rel_tol
@@ -80,11 +91,16 @@ class DocumentService:
         overall_confidence = extraction_merge.recompute_overall_confidence(extracted_data, document_type)
         logger.info(
             "financial_validation_completed",
-            extra={"document_filename": filename, "overall_status": validation["overall_status"], "issue_count": len(validation["issues"])},
+            extra={
+                "document_filename": filename,
+                "overall_status": validation["overall_status"],
+                "issue_count": len(validation["issues"]),
+            },
         )
 
         processing_status = "PASS" if _meets_minimum_fields(extracted_data, document_type) else "FAILED"
         processing_time_ms = int((time.monotonic() - start) * 1000)
+        ocr_used = any(p.text_source == "rendered_ocr" for p in pages)
 
         result = {
             "document_name": filename,
@@ -95,8 +111,8 @@ class DocumentService:
             "extracted_data": extracted_data,
             "validation": validation,
             "processing_metadata": {
-                "ocr_used": any(p.text_source == "rendered_ocr" for p in pages),
-                "ocr_engine": self.settings.ocr_provider if any(p.text_source == "rendered_ocr" for p in pages) else None,
+                "ocr_used": ocr_used,
+                "ocr_engine": self.settings.ocr_provider if ocr_used else None,
                 "llm_model": self.settings.llm_model,
                 "text_source": pages[0].text_source if pages else "unknown",
                 "processed_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),

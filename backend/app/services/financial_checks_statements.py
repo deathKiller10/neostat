@@ -2,7 +2,11 @@
 keeps invoice and balance sheet) to keep each file focused and under ~300 lines.
 """
 
-from backend.app.services.financial_validation_service import LABEL_SYNONYMS, evaluate_check, find_line_item_value
+from backend.app.services.financial_validation_service import (
+    LABEL_SYNONYMS,
+    evaluate_check,
+    find_line_item_value,
+)
 
 
 def build_profit_and_loss_checks(extracted_data: dict, abs_tol: float, rel_tol: float) -> list[dict]:
@@ -10,7 +14,7 @@ def build_profit_and_loss_checks(extracted_data: dict, abs_tol: float, rel_tol: 
     line_items = extracted_data.get("line_items", [])
     for period in extracted_data.get("periods", []):
 
-        def find(key):
+        def find(key, period=period):
             return find_line_item_value(line_items, period, LABEL_SYNONYMS[key])[0]
 
         total_income = find("total_income")
@@ -75,7 +79,10 @@ def build_profit_and_loss_checks(extracted_data: dict, abs_tol: float, rel_tol: 
             evaluate_check(
                 name=f"profit_and_loss_appropriation_check[{period}]",
                 formula="current_profit + brought_forward_profit",
-                operands={"current_profit": find("current_profit"), "brought_forward_profit": find("brought_forward_profit")},
+                operands={
+                    "current_profit": find("current_profit"),
+                    "brought_forward_profit": find("brought_forward_profit"),
+                },
                 calc_fn=lambda o: o["current_profit"] + o["brought_forward_profit"],
                 reported_value=find("total_available_for_appropriation"),
                 abs_tol=abs_tol,
@@ -90,7 +97,7 @@ def build_cash_flow_checks(extracted_data: dict, abs_tol: float, rel_tol: float)
     line_items = extracted_data.get("line_items", [])
     for period in extracted_data.get("periods", []):
 
-        def find(key):
+        def find(key, period=period):
             return find_line_item_value(line_items, period, LABEL_SYNONYMS[key])[0]
 
         operating = find("operating_activities")

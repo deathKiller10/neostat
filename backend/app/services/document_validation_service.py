@@ -39,7 +39,7 @@ def sniff_content_type(content: bytes) -> str:
         import magic
 
         return magic.from_buffer(content, mime=True)
-    except Exception:
+    except Exception:  # noqa: BLE001 -- any libmagic failure should fall back, not propagate
         if content.startswith(_PDF_MAGIC):
             return "application/pdf"
         if content.startswith(_JPEG_MAGIC):

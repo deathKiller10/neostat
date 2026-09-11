@@ -7,7 +7,11 @@ from google.genai import Client, errors, types
 from PIL import Image
 from pydantic import BaseModel, ValidationError
 
-from backend.app.core.exceptions import ExtractionFailedError, LlmRateLimitedError, LlmTimeoutError
+from backend.app.core.exceptions import (
+    ExtractionFailedError,
+    LlmRateLimitedError,
+    LlmTimeoutError,
+)
 
 logger = logging.getLogger("app.llm")
 

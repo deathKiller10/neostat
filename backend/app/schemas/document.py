@@ -1,20 +1,15 @@
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
-class DocumentType(str, Enum):
+class DocumentType(StrEnum):
     invoice = "invoice"
     balance_sheet = "balance_sheet"
     profit_and_loss = "profit_and_loss"
     cash_flow_statement = "cash_flow_statement"
-
-
-class ProcessingStatus(str, Enum):
-    pass_ = "PASS"
-    failed = "FAILED"
 
 
 class FileValidationResult(BaseModel):

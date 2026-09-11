@@ -4,7 +4,10 @@ financial statements (HDFC pages show two years side by side); invoices have no
 periods so their checks run once each.
 """
 
-from backend.app.services.financial_checks_statements import build_cash_flow_checks, build_profit_and_loss_checks
+from backend.app.services.financial_checks_statements import (
+    build_cash_flow_checks,
+    build_profit_and_loss_checks,
+)
 from backend.app.services.financial_validation_service import (
     LABEL_SYNONYMS,
     evaluate_check,

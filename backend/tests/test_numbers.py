@@ -1,6 +1,10 @@
 import pytest
 
-from backend.app.utils.numbers import extract_numbers_from_text, parse_number, value_grounded_in_text
+from backend.app.utils.numbers import (
+    extract_numbers_from_text,
+    parse_number,
+    value_grounded_in_text,
+)
 
 
 @pytest.mark.parametrize(

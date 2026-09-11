@@ -219,7 +219,12 @@ def test_profit_and_loss_chain():
         ],
     }
     result = validate(extracted, "profit_and_loss", ABS_TOL, REL_TOL)
-    names = ["profit_and_loss_income_check", "profit_and_loss_expenditure_check", "profit_and_loss_net_profit_check", "profit_and_loss_minority_interest_check"]
+    names = [
+        "profit_and_loss_income_check",
+        "profit_and_loss_expenditure_check",
+        "profit_and_loss_net_profit_check",
+        "profit_and_loss_minority_interest_check",
+    ]
     for name in names:
         check = next(c for c in result["checks"] if c["name"] == f"{name}[{period}]")
         assert check["status"] == "PASS", check
