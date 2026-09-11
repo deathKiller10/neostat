@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: neostat-docintel
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: OCR_PROVIDER
+        value: tesseract
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: LLM_MODEL
+        value: gemini-2.5-flash
+      - key: MAX_UPLOAD_MB
+        value: "10"
+      - key: MAX_PAGE_COUNT
+        value: "3"
+      - key: VALIDATION_ABS_TOL
+        value: "1.00"
+      - key: VALIDATION_REL_TOL
+        value: "0.005"
+      - key: SAMPLE_RUN_DELAY_SECONDS
+        value: "6"
+      - key: CORS_ALLOW_ORIGINS
+        value: "*"
+      - key: APP_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
