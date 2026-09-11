@@ -138,7 +138,8 @@ def build_financial_extracted_data(page_results: PageResults) -> tuple[dict, flo
     for page, raw in page_results:
         for item in raw.line_items:
             values = {}
-            for period, value in item.values.items():
+            for period_value in item.values:
+                period, value = period_value.period, period_value.value
                 if value is None:
                     values[period] = _empty_field()
                     continue

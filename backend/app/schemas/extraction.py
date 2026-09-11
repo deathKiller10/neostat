@@ -50,10 +50,22 @@ class InvoiceExtraction(BaseModel):
     change_given: NumField = Field(default_factory=NumField)
 
 
+class PeriodValue(BaseModel):
+    period: str
+    value: float | None = None
+
+
 class FinancialLineItem(BaseModel):
+    """`values` is a list of (period, value) pairs rather than a dict keyed by period
+    -- Gemini's structured-output mode on the free Developer API doesn't support
+    open-ended object maps (`additionalProperties`), only fixed-shape objects, so a
+    dict-of-periods schema is rejected at request time. `extraction_merge.py`
+    converts this list into the period-keyed shape the API actually returns.
+    """
+
     label: str
     section: str | None = None
-    values: dict[str, float | None] = Field(default_factory=dict)
+    values: list[PeriodValue] = Field(default_factory=list)
     source_text: str | None = None
 
 

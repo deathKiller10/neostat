@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     google_api_key: str = ""
     ocr_provider: str = "tesseract"
     llm_provider: str = "gemini"
-    llm_model: str = "gemini-2.5-flash"
+    llm_model: str = "gemini-3.6-flash"
 
     max_upload_mb: int = 10
     max_page_count: int = 3

@@ -92,7 +92,11 @@ INVOICE_GUIDANCE = (
     "This is a retail invoice or receipt. Tax may already be included in the displayed "
     "total (look for wording like 'Inclusive' or 'Incl. GST') or added on top of a "
     "subtotal -- read is_tax_inclusive from what the document actually says, don't "
-    "assume. Capture every line item shown, not just the first few."
+    "assume. Capture every line item shown, not just the first few. A line item's "
+    "`amount` is always its pre-tax line total (quantity times unit_price), even on a "
+    "receipt where the displayed total is tax-inclusive -- if the line shows both a "
+    "pre-tax and a tax-inclusive column (e.g. 'Amt' vs 'Amt Inc. Tax'), use the "
+    "pre-tax one for `amount`."
 )
 
 FINANCIAL_STATEMENT_GUIDANCE = (
@@ -101,9 +105,10 @@ FINANCIAL_STATEMENT_GUIDANCE = (
     "comparative year columns. Negative amounts are shown in brackets, e.g. "
     "'(1,546.40)' means -1546.40 -- convert brackets to a negative number yourself. "
     "Transcribe every line item visible on the page, including subtotals such as "
-    "'Total', in the order they appear, and record each comparative period as a "
-    "separate entry in `values` keyed by the exact period label shown in the column "
-    "header (e.g. 'March 31, 2024')."
+    "'Total', in the order they appear. For each line item, add one entry to `values` "
+    "per comparative column, each with `period` set to the exact label shown in that "
+    "column's header (e.g. 'March 31, 2024') and `value` set to that column's number "
+    "for this line."
 )
 
 

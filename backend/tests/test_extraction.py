@@ -3,6 +3,7 @@ from backend.app.schemas.extraction import (
     FinancialStatementExtraction,
     InvoiceExtraction,
     NumField,
+    PeriodValue,
     StrField,
 )
 from backend.app.services.extraction_service import PreparedPage, extract
@@ -39,12 +40,16 @@ def test_financial_schema_preserves_comparative_periods():
         line_items=[
             FinancialLineItem(
                 label="Total Assets",
-                values={"March 31, 2024": 100.0, "March 31, 2023": 90.0},
+                values=[
+                    PeriodValue(period="March 31, 2024", value=100.0),
+                    PeriodValue(period="March 31, 2023", value=90.0),
+                ],
             )
         ],
     )
-    assert extraction.line_items[0].values["March 31, 2024"] == 100.0
-    assert extraction.line_items[0].values["March 31, 2023"] == 90.0
+    values_by_period = {pv.period: pv.value for pv in extraction.line_items[0].values}
+    assert values_by_period["March 31, 2024"] == 100.0
+    assert values_by_period["March 31, 2023"] == 90.0
 
 
 def test_grounded_value_gets_high_confidence_and_grounded_true():
@@ -80,7 +85,10 @@ def test_financial_line_item_period_grounding():
             FinancialLineItem(
                 label="Deposits",
                 section="CAPITAL AND LIABILITIES",
-                values={"March 31, 2020": 11462071336.0, "March 31, 2019": 9225026779.0},
+                values=[
+                    PeriodValue(period="March 31, 2020", value=11462071336.0),
+                    PeriodValue(period="March 31, 2019", value=9225026779.0),
+                ],
                 source_text="Deposits 3 11,462,071,336 9,225,026,779",
             )
         ],
