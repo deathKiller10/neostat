@@ -164,3 +164,27 @@ def build_financial_extracted_data(page_results: PageResults) -> tuple[dict, flo
 
     overall = compute_overall_confidence(field_confidences, FINANCIAL_KEY_FIELDS)
     return extracted, overall
+
+
+def recompute_overall_confidence(extracted_data: dict, document_type: str) -> float:
+    """Re-derives overall_confidence after document_service applies the failing-check
+    confidence penalty to individual fields in place.
+    """
+    field_confidences: dict[str, float] = {}
+
+    if document_type == "invoice":
+        for name in INVOICE_STR_FIELDS + INVOICE_NUM_FIELDS:
+            field = extracted_data.get(name)
+            if field and field.get("value") is not None:
+                field_confidences[name] = field["confidence"]
+        return compute_overall_confidence(field_confidences, INVOICE_KEY_FIELDS)
+
+    for name in FINANCIAL_STR_FIELDS:
+        field = extracted_data.get(name)
+        if field and field.get("value") is not None:
+            field_confidences[name] = field["confidence"]
+    for item in extracted_data.get("line_items", []):
+        for period, field in item.get("values", {}).items():
+            if field.get("value") is not None:
+                field_confidences[f"{item['label']}:{period}"] = field["confidence"]
+    return compute_overall_confidence(field_confidences, FINANCIAL_KEY_FIELDS)

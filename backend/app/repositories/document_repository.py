@@ -37,14 +37,17 @@ class DocumentRepository:
             if result is not None:
                 return result
 
-            stem = document_name.rsplit(".", 1)[0].lower()
-            stmt = (
-                select(Document)
-                .where(func.lower(Document.document_name) == stem)
-                .order_by(Document.processed_at.desc())
-                .limit(1)
-            )
-            return self.db.execute(stmt).scalar_one_or_none()
+            # Fall back to comparing extension-stripped names in Python -- doing this
+            # portably in SQL across SQLite and Postgres isn't worth the complexity at
+            # this scale, and results are already ordered so the first stem match found
+            # is the latest one.
+            target_stem = document_name.rsplit(".", 1)[0].lower()
+            all_docs = self.db.execute(select(Document).order_by(Document.processed_at.desc())).scalars().all()
+            for candidate in all_docs:
+                candidate_stem = candidate.document_name.rsplit(".", 1)[0].lower()
+                if candidate_stem == target_stem:
+                    return candidate
+            return None
         except SQLAlchemyError as exc:
             raise DatabaseError(f"Failed to fetch document: {exc}") from exc
 

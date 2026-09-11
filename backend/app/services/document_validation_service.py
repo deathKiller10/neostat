@@ -95,7 +95,7 @@ def validate_upload(content: bytes, filename: str, settings: Settings) -> FileVa
 
     logger.info(
         "file_validation_passed",
-        extra={"filename": filename, "content_type": detected_mime, "page_count": page_count},
+        extra={"document_filename": filename, "content_type": detected_mime, "page_count": page_count},
     )
 
     return FileValidationResult(
