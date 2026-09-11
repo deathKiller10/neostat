@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ document_name }}{% endblock %}
+{% block page_id %}result{% endblock %}
+{% block content %}
+<div id="result-root" data-document-name="{{ document_name }}">
+    <p id="loading-state">Loading...</p>
+</div>
+{% endblock %}

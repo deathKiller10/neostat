@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block page_id %}dashboard{% endblock %}
+{% block content %}
+<h1>Processed documents</h1>
+
+<div class="toolbar">
+    <input type="text" id="search-input" placeholder="Search by name...">
+    <select id="type-filter">
+        <option value="">All types</option>
+        <option value="invoice">Invoice</option>
+        <option value="balance_sheet">Balance Sheet</option>
+        <option value="profit_and_loss">Profit &amp; Loss</option>
+        <option value="cash_flow_statement">Cash Flow Statement</option>
+    </select>
+</div>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Confidence</th>
+            <th>Processed</th>
+        </tr>
+    </thead>
+    <tbody id="documents-tbody"></tbody>
+</table>
+<p id="empty-state" class="empty-state" hidden>No documents processed yet.</p>
+{% endblock %}

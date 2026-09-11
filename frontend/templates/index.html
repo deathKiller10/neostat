@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 {% block title %}Upload{% endblock %}
+{% block page_id %}upload{% endblock %}
 {% block content %}
 <h1>Upload a document</h1>
-<p>Skeleton page -- full upload form lands in a later stage.</p>
+<p class="subtitle">Invoices, balance sheets, profit &amp; loss statements, and cash flow statements (PDF, JPG, or PNG, up to 3 pages).</p>
+
+<form id="upload-form">
+    <label for="document-type">Document type</label>
+    <select id="document-type" name="document_type" required>
+        <option value="invoice">Invoice</option>
+        <option value="balance_sheet">Balance Sheet</option>
+        <option value="profit_and_loss">Profit &amp; Loss</option>
+        <option value="cash_flow_statement">Cash Flow Statement</option>
+    </select>
+
+    <label for="file-input">File</label>
+    <input type="file" id="file-input" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <button type="submit" id="process-button">Process document</button>
+</form>
+
+<div id="progress-state" class="status-banner status-info" hidden>Processing document -- this can take up to a minute...</div>
+<div id="error-banner" class="status-banner status-error" hidden></div>
 {% endblock %}
