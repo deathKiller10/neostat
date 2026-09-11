@@ -1,0 +1,17 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.db
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+uploads_tmp/
+*.egg-info/
+.claude/
+CLAUDE.md
+.mcp.json
+node_modules/
+.DS_Store
+*.log
