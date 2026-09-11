@@ -14,9 +14,16 @@ if shutil.which("tesseract") is None and _WINDOWS_TESSERACT_DEFAULT.exists():
 
 
 @dataclass
+class OcrWord:
+    text: str
+    confidence: float  # 0-1
+
+
+@dataclass
 class OcrResult:
     text: str
     mean_confidence: float
+    words: list[OcrWord]
 
 
 class OCRProvider(ABC):
@@ -31,18 +38,29 @@ class TesseractOCRProvider(OCRProvider):
         except Exception as exc:
             raise OcrFailedError(f"Tesseract OCR failed: {exc}") from exc
 
-        words = []
-        confidences = []
-        for text, conf in zip(data["text"], data["conf"], strict=True):
-            if text.strip():
-                words.append(text)
-            conf_val = float(conf)
-            if conf_val >= 0:
-                confidences.append(conf_val)
+        words: list[OcrWord] = []
+        confidences: list[float] = []
+        lines: dict[tuple[int, int, int], list[str]] = {}
+        line_order: list[tuple[int, int, int]] = []
 
-        text = " ".join(words)
+        n = len(data["text"])
+        for i in range(n):
+            text = data["text"][i]
+            conf_val = float(data["conf"][i])
+            if not text.strip() or conf_val < 0:
+                continue
+            words.append(OcrWord(text=text, confidence=round(conf_val / 100.0, 4)))
+            confidences.append(conf_val)
+
+            key = (data["block_num"][i], data["par_num"][i], data["line_num"][i])
+            if key not in lines:
+                lines[key] = []
+                line_order.append(key)
+            lines[key].append(text)
+
+        text = "\n".join(" ".join(lines[key]) for key in line_order)
         mean_confidence = (sum(confidences) / len(confidences) / 100.0) if confidences else 0.0
-        return OcrResult(text=text, mean_confidence=round(mean_confidence, 4))
+        return OcrResult(text=text, mean_confidence=round(mean_confidence, 4), words=words)
 
 
 def get_ocr_provider(provider_name: str) -> OCRProvider:
