@@ -339,6 +339,10 @@ are mocked in `test_api.py` and `test_extraction.py`. Coverage:
   vs "assets") relies on the LLM having populated a `section` label per line item
   consistently; if it doesn't, the component-sum checks return `NOT_APPLICABLE` rather
   than a wrong number.
+- The `Dockerfile` wasn't build-tested locally (no Docker available in the environment
+  this was built in); it was reviewed for correctness instead (pinned base image,
+  every package the code actually imports, `$PORT` honored for Render). Render builds
+  it directly from source on deploy, which is the real test.
 
 ## What I'd change for production
 
