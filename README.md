@@ -97,10 +97,10 @@ list, and `/docs` for the Swagger UI.
 
 ## Live URLs
 
-- Frontend: `TODO -- fill in after Render deploy`
-- API base: `TODO -- same host, path prefix /api/v1`
-- Swagger / OpenAPI docs: `TODO -- same host, path /docs`
-- GitHub repository: `TODO -- paste the public repo URL`
+- Frontend: https://neostat-fw03.onrender.com/
+- API base: https://neostat-fw03.onrender.com/api/v1
+- Swagger / OpenAPI docs: https://neostat-fw03.onrender.com/docs
+- GitHub repository: https://github.com/deathKiller10/neostat
 
 The frontend and the API are the same deployed service -- there is no separate
 frontend host. The four links above will resolve to the same Render URL with
