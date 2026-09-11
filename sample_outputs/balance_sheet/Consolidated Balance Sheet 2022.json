@@ -1,0 +1,608 @@
+{
+  "document_name": "Consolidated Balance Sheet 2022.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "overall_confidence": 0.5969,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "statement_title": {
+      "value": "Consolidated Balance Sheet",
+      "confidence": 0.8272,
+      "page_number": 1,
+      "source_text": "Consolidated Balance Sheet",
+      "grounded": null
+    },
+    "entity_name": {
+      "value": null,
+      "confidence": 0.0,
+      "page_number": null,
+      "source_text": null,
+      "grounded": null
+    },
+    "period_end": {
+      "value": "March 31, 2022",
+      "confidence": 0.8272,
+      "page_number": 1,
+      "source_text": "As at March 31, 2022",
+      "grounded": null
+    },
+    "currency": {
+      "value": "INR",
+      "confidence": 0.8272,
+      "page_number": 1,
+      "source_text": "\u20b9 in crore",
+      "grounded": null
+    },
+    "units": {
+      "value": "crore",
+      "confidence": 0.8272,
+      "page_number": 1,
+      "source_text": "\u20b9 in crore",
+      "grounded": null
+    },
+    "periods": [
+      "March 31, 2022",
+      "March 31, 2021"
+    ],
+    "line_items": [
+      {
+        "label": "Capital",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 554.55,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Capital 1 554.55 551.28",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 551.28,
+            "confidence": 0.72,
+            "page_number": 1,
+            "source_text": "Capital 1 554.55 551.28",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Capital 1 554.55 551.28"
+      },
+      {
+        "label": "Reserves and surplus",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 246771.62,
+            "confidence": 0.28,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 246,771.62 209,258.90",
+            "grounded": true
+          },
+          "March 31, 2021": {
+            "value": 209258.9,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 246,771.62 209,258.90",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Reserves and surplus 2 246,771.62 209,258.90"
+      },
+      {
+        "label": "Minority interest",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 720.41,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 720.41 632.76",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 632.76,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 720.41 632.76",
+            "grounded": false
+          }
+        },
+        "page_number": 1,
+        "source_text": "Minority interest 2A 720.41 632.76"
+      },
+      {
+        "label": "Deposits",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 1558003.03,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Deposits 3 1,558,003.03 1,333,720.87",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 1333720.87,
+            "confidence": 0.7,
+            "page_number": 1,
+            "source_text": "Deposits 3 1,558,003.03 1,333,720.87",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Deposits 3 1,558,003.03 1,333,720.87"
+      },
+      {
+        "label": "Borrowings",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 226966.5,
+            "confidence": 0.8272,
+            "page_number": 1,
+            "source_text": "Borrowings 4 226,966.50 177,696.75",
+            "grounded": true
+          },
+          "March 31, 2021": {
+            "value": 177696.75,
+            "confidence": 0.16,
+            "page_number": 1,
+            "source_text": "Borrowings 4 226,966.50 177,696.75",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Borrowings 4 226,966.50 177,696.75"
+      },
+      {
+        "label": "Other liabilities and provisions",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 89918.19,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 89,918.19 77,646.07",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 77646.07,
+            "confidence": 0.93,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 89,918.19 77,646.07",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other liabilities and provisions 5 89,918.19 77,646.07"
+      },
+      {
+        "label": "Total",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2022": {
+            "value": 2122934.3,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Total 2,122,934.30 1,799,506.63",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 1799506.63,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Total 2,122,934.30 1,799,506.63",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 2,122,934.30 1,799,506.63"
+      },
+      {
+        "label": "Cash and balances with Reserve Bank of India",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 130030.71,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 130,030.71 97,370.35",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 97370.35,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 130,030.71 97,370.35",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Cash and balances with Reserve Bank of India 6 130,030.71 97,370.35"
+      },
+      {
+        "label": "Balances with banks and money at call and short notice",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 25355.02,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 25,355.02 23,902.16",
+            "grounded": true
+          },
+          "March 31, 2021": {
+            "value": 23902.16,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 25,355.02 23,902.16",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Balances with banks and money at call and short notice 7 25,355.02 23,902.16"
+      },
+      {
+        "label": "Investments",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 449263.86,
+            "confidence": 0.8272,
+            "page_number": 1,
+            "source_text": "Investments 8 449,263.86 438,823.11",
+            "grounded": true
+          },
+          "March 31, 2021": {
+            "value": 438823.11,
+            "confidence": 0.47,
+            "page_number": 1,
+            "source_text": "Investments 8 449,263.86 438,823.11",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Investments 8 449,263.86 438,823.11"
+      },
+      {
+        "label": "Advances",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 1420942.28,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Advances 9 1,420,942.28 1,185,283.52",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 1185283.52,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Advances 9 1,420,942.28 1,185,283.52",
+            "grounded": false
+          }
+        },
+        "page_number": 1,
+        "source_text": "Advances 9 1,420,942.28 1,185,283.52"
+      },
+      {
+        "label": "Fixed assets",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 6283.28,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 6,283.28 5,099.56",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 5099.56,
+            "confidence": 0.68,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 6,283.28 5,099.56",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Fixed assets 10 6,283.28 5,099.56"
+      },
+      {
+        "label": "Other assets",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 90910.36,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Other assets 11 90,910.36 48,879.14",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 48879.14,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Other assets 11 90,910.36 48,879.14",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other assets 11 90,910.36 48,879.14"
+      },
+      {
+        "label": "Goodwill on Consolidation",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 148.79,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Goodwill on Consolidation 148.79 148.79",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 148.79,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Goodwill on Consolidation 148.79 148.79",
+            "grounded": false
+          }
+        },
+        "page_number": 1,
+        "source_text": "Goodwill on Consolidation 148.79 148.79"
+      },
+      {
+        "label": "Total",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2022": {
+            "value": 2122934.3,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Total 2,122,934.30 1,799,506.63",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 1799506.63,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Total 2,122,934.30 1,799,506.63",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 2,122,934.30 1,799,506.63"
+      },
+      {
+        "label": "Contingent liabilities",
+        "section": null,
+        "values": {
+          "March 31, 2022": {
+            "value": 1400197.64,
+            "confidence": 0.9,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 1,400,197.64 975,280.66",
+            "grounded": true
+          },
+          "March 31, 2021": {
+            "value": 975280.66,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 1,400,197.64 975,280.66",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Contingent liabilities 12 1,400,197.64 975,280.66"
+      },
+      {
+        "label": "Bills for collection",
+        "section": null,
+        "values": {
+          "March 31, 2022": {
+            "value": 56968.05,
+            "confidence": 0.2895,
+            "page_number": 1,
+            "source_text": "Bills for collection 56,968.05 44,748.14",
+            "grounded": false
+          },
+          "March 31, 2021": {
+            "value": 44748.14,
+            "confidence": 0.57,
+            "page_number": 1,
+            "source_text": "Bills for collection 56,968.05 44,748.14",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Bills for collection 56,968.05 44,748.14"
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "balance_sheet_totals_check[March 31, 2022]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 2122934.3
+        },
+        "calculated_value": 2122934.3,
+        "reported_value": 2122934.3,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[March 31, 2022]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 554.55,
+          "Reserves and surplus": 246771.62,
+          "Minority interest": 720.41,
+          "Deposits": 1558003.03,
+          "Borrowings": 226966.5,
+          "Other liabilities and provisions": 89918.19
+        },
+        "calculated_value": 2122934.3,
+        "reported_value": 2122934.3,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[March 31, 2022]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 130030.71,
+          "Balances with banks and money at call and short notice": 25355.02,
+          "Investments": 449263.86,
+          "Advances": 1420942.28,
+          "Fixed assets": 6283.28,
+          "Other assets": 90910.36,
+          "Goodwill on Consolidation": 148.79
+        },
+        "calculated_value": 2122934.3,
+        "reported_value": 2122934.3,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_totals_check[March 31, 2021]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 1799506.63
+        },
+        "calculated_value": 1799506.63,
+        "reported_value": 1799506.63,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[March 31, 2021]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 551.28,
+          "Reserves and surplus": 209258.9,
+          "Minority interest": 632.76,
+          "Deposits": 1333720.87,
+          "Borrowings": 177696.75,
+          "Other liabilities and provisions": 77646.07
+        },
+        "calculated_value": 1799506.63,
+        "reported_value": 1799506.63,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[March 31, 2021]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 97370.35,
+          "Balances with banks and money at call and short notice": 23902.16,
+          "Investments": 438823.11,
+          "Advances": 1185283.52,
+          "Fixed assets": 5099.56,
+          "Other assets": 48879.14,
+          "Goodwill on Consolidation": 148.79
+        },
+        "calculated_value": 1799506.63,
+        "reported_value": 1799506.63,
+        "variance": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": [
+      {
+        "type": "ungrounded_value",
+        "field": "Capital[March 31, 2022]",
+        "message": "Value '554.55' for Capital (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Minority interest[March 31, 2022]",
+        "message": "Value '720.41' for Minority interest (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Minority interest[March 31, 2021]",
+        "message": "Value '632.76' for Minority interest (March 31, 2021) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Deposits[March 31, 2022]",
+        "message": "Value '1558003.03' for Deposits (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Other liabilities and provisions[March 31, 2022]",
+        "message": "Value '89918.19' for Other liabilities and provisions (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Total[March 31, 2022]",
+        "message": "Value '2122934.3' for Total (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Cash and balances with Reserve Bank of India[March 31, 2022]",
+        "message": "Value '130030.71' for Cash and balances with Reserve Bank of India (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Advances[March 31, 2022]",
+        "message": "Value '1420942.28' for Advances (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Advances[March 31, 2021]",
+        "message": "Value '1185283.52' for Advances (March 31, 2021) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Fixed assets[March 31, 2022]",
+        "message": "Value '6283.28' for Fixed assets (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Other assets[March 31, 2022]",
+        "message": "Value '90910.36' for Other assets (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Goodwill on Consolidation[March 31, 2022]",
+        "message": "Value '148.79' for Goodwill on Consolidation (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Goodwill on Consolidation[March 31, 2021]",
+        "message": "Value '148.79' for Goodwill on Consolidation (March 31, 2021) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Total[March 31, 2022]",
+        "message": "Value '2122934.3' for Total (March 31, 2022) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Bills for collection[March 31, 2022]",
+        "message": "Value '56968.05' for Bills for collection (March 31, 2022) was not found in the source text."
+      }
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "ocr_engine": "tesseract",
+    "llm_model": "gemini-3.6-flash",
+    "text_source": "rendered_ocr",
+    "processed_at": "2026-09-11T09:07:52Z",
+    "processing_time_ms": 25791
+  }
+}

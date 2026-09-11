@@ -1,0 +1,562 @@
+{
+  "document_name": "Consolidated Balance Sheet 2025.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "overall_confidence": 0.9102,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "statement_title": {
+      "value": "CONSOLIDATED BALANCE SHEET",
+      "confidence": 0.9247,
+      "page_number": 1,
+      "source_text": "CONSOLIDATED BALANCE SHEET",
+      "grounded": null
+    },
+    "entity_name": {
+      "value": "HDFC Bank Limited",
+      "confidence": 0.9247,
+      "page_number": 1,
+      "source_text": "HDFC Bank Limited",
+      "grounded": null
+    },
+    "period_end": {
+      "value": "March 31, 2025",
+      "confidence": 0.9247,
+      "page_number": 1,
+      "source_text": "As at March 31, 2025",
+      "grounded": null
+    },
+    "currency": {
+      "value": "INR",
+      "confidence": 0.9247,
+      "page_number": 1,
+      "source_text": "\u20b9 in crore",
+      "grounded": null
+    },
+    "units": {
+      "value": "crore",
+      "confidence": 0.9247,
+      "page_number": 1,
+      "source_text": "\u20b9 in crore",
+      "grounded": null
+    },
+    "periods": [
+      "March 31, 2025",
+      "March 31, 2024"
+    ],
+    "line_items": [
+      {
+        "label": "Capital",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 765.22,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Capital 1 765.22 759.69",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 759.69,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Capital 1 765.22 759.69",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Capital 1 765.22 759.69"
+      },
+      {
+        "label": "Employees stock options outstanding",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 3805.19,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Employees stock options outstanding 18 (5) 3,805.19 2,652.72",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 2652.72,
+            "confidence": 0.93,
+            "page_number": 1,
+            "source_text": "Employees stock options outstanding 18 (5) 3,805.19 2,652.72",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Employees stock options outstanding 18 (5) 3,805.19 2,652.72"
+      },
+      {
+        "label": "Reserves and surplus",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 517218.98,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 517,218.98 452,982.84",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 452982.84,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 517,218.98 452,982.84",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Reserves and surplus 2 517,218.98 452,982.84"
+      },
+      {
+        "label": "Minority interest",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 16359.04,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 16,359.04 13,383.40",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 13383.4,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 16,359.04 13,383.40",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Minority interest 2A 16,359.04 13,383.40"
+      },
+      {
+        "label": "Deposits",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 2710898.23,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Deposits 3 2,710,898.23 2,376,887 .28",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 2376887.28,
+            "confidence": 0.2695,
+            "page_number": 1,
+            "source_text": "Deposits 3 2,710,898.23 2,376,887 .28",
+            "grounded": false
+          }
+        },
+        "page_number": 1,
+        "source_text": "Deposits 3 2,710,898.23 2,376,887 .28"
+      },
+      {
+        "label": "Borrowings",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 634605.57,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Borrowings 4 634,605.57 730,615.46",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 730615.46,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Borrowings 4 634,605.57 730,615.46",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Borrowings 4 634,605.57 730,615.46"
+      },
+      {
+        "label": "Other liabilities and provisions",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 188163.66,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 188,163.66 174,832.07",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 174832.07,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 188,163.66 174,832.07",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other liabilities and provisions 5 188,163.66 174,832.07"
+      },
+      {
+        "label": "Policyholders' funds",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 320601.53,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Policyholders' funds 320,601.53 278,080.80",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 278080.8,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Policyholders' funds 320,601.53 278,080.80",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Policyholders' funds 320,601.53 278,080.80"
+      },
+      {
+        "label": "Total",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "March 31, 2025": {
+            "value": 4392417.42,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Total 4,392,417.42 4,030,194.26",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 4030194.26,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Total 4,392,417.42 4,030,194.26",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 4,392,417.42 4,030,194.26"
+      },
+      {
+        "label": "Cash and balances with Reserve Bank of India",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 144390.25,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 144,390.25 178,718.67",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 178718.67,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 144,390.25 178,718.67",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Cash and balances with Reserve Bank of India 6 144,390.25 178,718.67"
+      },
+      {
+        "label": "Balances with banks and money at call and short notice",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 105557.65,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 105,557.65 50,115.84",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 50115.84,
+            "confidence": 0.93,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 105,557.65 50,115.84",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Balances with banks and money at call and short notice 7 105,557.65 50,115.84"
+      },
+      {
+        "label": "Investments",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 1186472.89,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Investments 8 1,186,472.89 1,005,681.63",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 1005681.63,
+            "confidence": 0.8,
+            "page_number": 1,
+            "source_text": "Investments 8 1,186,472.89 1,005,681.63",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Investments 8 1,186,472.89 1,005,681.63"
+      },
+      {
+        "label": "Advances",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 2724938.16,
+            "confidence": 0.9,
+            "page_number": 1,
+            "source_text": "Advances 9 2,724,938.16 2,571,916.65",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 2571916.65,
+            "confidence": 0.86,
+            "page_number": 1,
+            "source_text": "Advances 9 2,724,938.16 2,571,916.65",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Advances 9 2,724,938.16 2,571,916.65"
+      },
+      {
+        "label": "Fixed assets",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 15257.94,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 15,257.94 12,603.76",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 12603.76,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 15,257.94 12,603.76",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Fixed assets 10 15,257.94 12,603.76"
+      },
+      {
+        "label": "Other assets",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 215800.53,
+            "confidence": 0.93,
+            "page_number": 1,
+            "source_text": "Other assets 11 215,800.53 211,157.71",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 211157.71,
+            "confidence": 0.78,
+            "page_number": 1,
+            "source_text": "Other assets 11 215,800.53 211,157.71",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other assets 11 215,800.53 211,157.71"
+      },
+      {
+        "label": "Total",
+        "section": "ASSETS",
+        "values": {
+          "March 31, 2025": {
+            "value": 4392417.42,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Total 4,392,417.42 4,030,194.26",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 4030194.26,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Total 4,392,417.42 4,030,194.26",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 4,392,417.42 4,030,194.26"
+      },
+      {
+        "label": "Contingent liabilities",
+        "section": null,
+        "values": {
+          "March 31, 2025": {
+            "value": 2709921.85,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 2,709,921.85 2,344,487.73",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 2344487.73,
+            "confidence": 0.83,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 2,709,921.85 2,344,487.73",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Contingent liabilities 12 2,709,921.85 2,344,487.73"
+      },
+      {
+        "label": "Bills for collection",
+        "section": null,
+        "values": {
+          "March 31, 2025": {
+            "value": 70679.55,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Bills for collection 70,679.55 65,332.87",
+            "grounded": true
+          },
+          "March 31, 2024": {
+            "value": 65332.87,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Bills for collection 70,679.55 65,332.87",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Bills for collection 70,679.55 65,332.87"
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "balance_sheet_totals_check[March 31, 2025]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 4392417.42
+        },
+        "calculated_value": 4392417.42,
+        "reported_value": 4392417.42,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[March 31, 2025]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 765.22,
+          "Employees stock options outstanding": 3805.19,
+          "Reserves and surplus": 517218.98,
+          "Minority interest": 16359.04,
+          "Deposits": 2710898.23,
+          "Borrowings": 634605.57,
+          "Other liabilities and provisions": 188163.66,
+          "Policyholders' funds": 320601.53
+        },
+        "calculated_value": 4392417.42,
+        "reported_value": 4392417.42,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[March 31, 2025]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 144390.25,
+          "Balances with banks and money at call and short notice": 105557.65,
+          "Investments": 1186472.89,
+          "Advances": 2724938.16,
+          "Fixed assets": 15257.94,
+          "Other assets": 215800.53
+        },
+        "calculated_value": 4392417.42,
+        "reported_value": 4392417.42,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_totals_check[March 31, 2024]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 4030194.26
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[March 31, 2024]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 759.69,
+          "Employees stock options outstanding": 2652.72,
+          "Reserves and surplus": 452982.84,
+          "Minority interest": 13383.4,
+          "Deposits": 2376887.28,
+          "Borrowings": 730615.46,
+          "Other liabilities and provisions": 174832.07,
+          "Policyholders' funds": 278080.8
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[March 31, 2024]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 178718.67,
+          "Balances with banks and money at call and short notice": 50115.84,
+          "Investments": 1005681.63,
+          "Advances": 2571916.65,
+          "Fixed assets": 12603.76,
+          "Other assets": 211157.71
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": [
+      {
+        "type": "ungrounded_value",
+        "field": "Deposits[March 31, 2024]",
+        "message": "Value '2376887.28' for Deposits (March 31, 2024) was not found in the source text."
+      }
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "ocr_engine": "tesseract",
+    "llm_model": "gemini-3.6-flash",
+    "text_source": "rendered_ocr",
+    "processed_at": "2026-09-11T09:09:26Z",
+    "processing_time_ms": 28070
+  }
+}

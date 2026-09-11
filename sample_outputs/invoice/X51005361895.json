@@ -1,0 +1,189 @@
+{
+  "document_name": "X51005361895.jpg",
+  "document_type": "invoice",
+  "processing_status": "PASS",
+  "overall_confidence": 0.7224,
+  "file_validation": {
+    "file_type": "image/jpeg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "shop_name": {
+      "value": "FUYI MINI MARKET",
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "FUYI MINI MARKET",
+      "grounded": null
+    },
+    "registration_number": {
+      "value": "0195932-X",
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "BR No.: 0195932-X",
+      "grounded": null
+    },
+    "gst_id": {
+      "value": "001601310720",
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "GST No. : 001601310720",
+      "grounded": null
+    },
+    "invoice_number": {
+      "value": "1CR0576494",
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "TRN: 1CR0576494",
+      "grounded": null
+    },
+    "invoice_date": {
+      "value": "25/01/2018 1:22:56PM",
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "25/01/2018 1:22:56PM",
+      "grounded": null
+    },
+    "currency": {
+      "value": null,
+      "confidence": 0.0,
+      "page_number": null,
+      "source_text": null,
+      "grounded": null
+    },
+    "subtotal": {
+      "value": 8.49,
+      "confidence": 0.26,
+      "page_number": 1,
+      "source_text": "1 KOTAK 8.49 8.49 9.00 SR",
+      "grounded": true
+    },
+    "tax_amount": {
+      "value": 0.51,
+      "confidence": 0.69,
+      "page_number": 1,
+      "source_text": "GST 6% + 0.51",
+      "grounded": true
+    },
+    "discount": {
+      "value": null,
+      "confidence": 0.0,
+      "page_number": null,
+      "source_text": null,
+      "grounded": null
+    },
+    "gst_taxable_amount": {
+      "value": 8.49,
+      "confidence": 0.26,
+      "page_number": 1,
+      "source_text": "SR 8.49 0.51",
+      "grounded": true
+    },
+    "gst_amount": {
+      "value": 0.51,
+      "confidence": 0.69,
+      "page_number": 1,
+      "source_text": "GST 6% + 0.51",
+      "grounded": true
+    },
+    "total_amount": {
+      "value": 9.0,
+      "confidence": 0.83,
+      "page_number": 1,
+      "source_text": "Total Includes GST 6% 9.00",
+      "grounded": true
+    },
+    "cash_paid": {
+      "value": 50.0,
+      "confidence": 0.94,
+      "page_number": 1,
+      "source_text": "Cash 50.00",
+      "grounded": true
+    },
+    "change_given": {
+      "value": 41.0,
+      "confidence": 0.93,
+      "page_number": 1,
+      "source_text": "Change 41.00",
+      "grounded": true
+    },
+    "is_tax_inclusive": {
+      "value": true,
+      "confidence": 0.7806,
+      "page_number": 1,
+      "source_text": "Total Includes GST 6%",
+      "grounded": null
+    },
+    "line_items": [
+      {
+        "description": "013 SUMMER CUP 48X230ML",
+        "quantity": 1.0,
+        "unit_price": 8.49,
+        "amount": 8.49,
+        "page_number": 1,
+        "source_text": "013 SUMMER CUP 48X230ML 1 KOTAK 8.49 8.49 9.00 SR"
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_line_item_check[0]",
+        "formula": "quantity * unit_price",
+        "operands": { "quantity": 1.0, "unit_price": 8.49 },
+        "calculated_value": 8.49,
+        "reported_value": 8.49,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "invoice_line_items_sum_check",
+        "formula": "sum(line_item.amount)",
+        "operands": { "line_total_sum": 8.49 },
+        "calculated_value": 8.49,
+        "reported_value": 8.49,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "invoice_tax_exclusive_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": { "subtotal": 8.49, "tax_amount": 0.51, "discount": 0.0 },
+        "calculated_value": 9.0,
+        "reported_value": 9.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "invoice_tax_inclusive_total_check",
+        "formula": "gst_taxable_amount + gst_amount",
+        "operands": { "gst_taxable_amount": 8.49, "gst_amount": 0.51 },
+        "calculated_value": 9.0,
+        "reported_value": 9.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "invoice_cash_change_check",
+        "formula": "cash_paid - total_amount",
+        "operands": { "cash_paid": 50.0, "total_amount": 9.0 },
+        "calculated_value": 41.0,
+        "reported_value": 41.0,
+        "variance": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "ocr_engine": "tesseract",
+    "llm_model": "gemini-3.6-flash",
+    "text_source": "rendered_ocr",
+    "processed_at": "2026-09-11T09:01:07Z",
+    "processing_time_ms": 27033
+  }
+}

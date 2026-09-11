@@ -79,7 +79,7 @@ def main():
 
     validation_pts = draw_box(ax, (0.4, 5.0), 2.6, 0.9, "1. File validation\n(type, size, pages, corruption)")
     extraction_pts = draw_box(ax, (3.4, 5.0), 2.6, 0.9, "2. Text extraction\ntext layer OR render + OCR")
-    llm_pts = draw_box(ax, (6.4, 5.0), 2.6, 0.9, "3. LLM structured extraction\nGemini 3.6 Flash + Pydantic schema")
+    llm_pts = draw_box(ax, (6.4, 5.0), 2.6, 0.9, "3. LLM structured extraction\nGemini (flash) + Pydantic schema")
     ground_pts = draw_box(ax, (9.4, 5.0), 2.9, 0.9, "4. Grounding check\nvalue must appear in source text")
 
     draw_arrow(ax, api_pts[0], validation_pts[1])

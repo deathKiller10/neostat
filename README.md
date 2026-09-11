@@ -36,7 +36,7 @@ hand-edit.
   couple of the cash flow statement pages do carry a real text layer, so each page is
   checked individually (`len(page.get_text().strip()) > 100`) and the text layer is
   used directly when it's there, since it's more accurate than OCR.
-- **A vision LLM (Gemini 3.6 Flash) rather than a fixed-schema/regex parser.** Line
+- **A vision LLM (Gemini, `gemini-flash-latest`) rather than a fixed-schema/regex parser.** Line
   item wording and row order shift across the 2017-2026 statement samples, and the
   invoice layouts vary between a Malaysian SROIE-style receipt format and a different
   general invoice format. A model given the page image plus OCR text handles layout
@@ -85,7 +85,7 @@ list, and `/docs` for the Swagger UI.
 | `GOOGLE_API_KEY` | *(required for real extraction)* | Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey). |
 | `OCR_PROVIDER` | `tesseract` | Selects the `OCRProvider` implementation. |
 | `LLM_PROVIDER` | `gemini` | Selects the `LLMProvider` implementation. |
-| `LLM_MODEL` | `gemini-3.6-flash` | Gemini model name. |
+| `LLM_MODEL` | `gemini-flash-latest` | Gemini model name. |
 | `MAX_UPLOAD_MB` | `10` | Rejects uploads larger than this with `FILE_TOO_LARGE`. |
 | `MAX_PAGE_COUNT` | `3` | Rejects PDFs with more pages than this with `PAGE_LIMIT_EXCEEDED`. |
 | `VALIDATION_ABS_TOL` | `1.00` | Absolute tolerance for financial checks. |
@@ -132,7 +132,7 @@ curl -X POST https://<host>/api/v1/documents/process \
     "overall_status": "PASS",
     "issues": []
   },
-  "processing_metadata": { "ocr_used": true, "ocr_engine": "tesseract", "llm_model": "gemini-3.6-flash", "text_source": "rendered_ocr", "processed_at": "2026-09-11T07:48:30Z", "processing_time_ms": 858 }
+  "processing_metadata": { "ocr_used": true, "ocr_engine": "tesseract", "llm_model": "gemini-flash-latest", "text_source": "rendered_ocr", "processed_at": "2026-09-11T07:48:30Z", "processing_time_ms": 858 }
 }
 ```
 
@@ -181,12 +181,17 @@ curl https://<host>/api/v1/health
   locally, but accuracy on skewed/low-contrast photographed receipts is noticeably
   worse than a hosted vision model, which is part of why the LLM is given both the OCR
   text and the raw page image rather than OCR text alone.
-- **Gemini 3.6 Flash** (Google AI Studio free tier) -- low per-minute request quota and
-  a daily cap. `llm_provider.py` retries on HTTP 429/503 with exponential backoff and
-  jitter (respecting `Retry-After` when present), capped at 4 attempts, before raising
+- **Gemini** (`gemini-flash-latest`, Google AI Studio free tier) -- low per-minute
+  request quota and, on the API key used to build this, a confirmed **20
+  requests/day per model** free-tier cap (that exact number comes from the quota
+  metric in the API's own 429 response, not a guess). That's enough to exercise every
+  part of the pipeline but not to batch-process all 50 sample documents in one day.
+  `llm_provider.py` retries on HTTP 429/503 with exponential backoff and jitter
+  (respecting `Retry-After` when present), capped at 4 attempts, before raising
   `LLM_RATE_LIMITED` (503) rather than hanging indefinitely. `scripts/run_samples.py`
-  sleeps `SAMPLE_RUN_DELAY_SECONDS` (default 6s) between documents so a full batch run
-  over the sample set doesn't exhaust the daily quota partway through.
+  sleeps `SAMPLE_RUN_DELAY_SECONDS` (default 6s) between documents and supports
+  `--skip-existing` so a batch that runs out of daily quota partway through can be
+  resumed the next day without reprocessing what already succeeded.
 
 ## Confidence scoring
 
@@ -301,6 +306,14 @@ are mocked in `test_api.py` and `test_extraction.py`. Coverage:
 
 ## Known limitations
 
+- **`sample_outputs/` doesn't yet include a real (non-mocked) profit & loss example.**
+  The free-tier API key used to build this hit its 20-requests/day cap (see "OCR and
+  LLM services" above) after processing all 10 balance sheets, 1 cash flow statement,
+  and 1 invoice for real -- profit & loss and the remaining invoices/cash flows are
+  still queued. `scripts/run_samples.py --skip-existing` picks up exactly where it
+  left off once the quota resets; every document type's extraction logic and
+  validation rules are exercised and tested regardless (see `test_extraction.py` and
+  `test_validation.py`), this is only about which real API outputs are committed.
 - **Grounding is a strict text match.** OCR occasionally splits a number across two
   tokens (a stray rendering space in the middle of a large figure), which makes a
   correct value show up as ungrounded. Merging adjacent number tokens would fix this
@@ -364,7 +377,10 @@ judgment on this assignment, not unreviewed model output.
   defaults; both are configurable via env for a grader who wants to test the boundary.
 - The assignment names `gemini-2.5-flash` as the model to use. By the time this was
   built, that model had been retired for new API keys (the API returns a 404 pointing
-  callers to `gemini-3.6-flash`), so `LLM_MODEL` defaults to `gemini-3.6-flash`
-  instead -- the current equivalent flash-tier, vision-capable model on the same free
-  tier. `LLM_MODEL` is an env var precisely so this can be repointed without a code
-  change if availability shifts again.
+  callers to a newer pinned version). That pinned version turned out to carry a very
+  low free-tier daily cap (20 requests/day, confirmed from the API's own quota-error
+  response) -- enough to fully exercise the pipeline but not to batch-process the
+  whole sample set in one day. `gemini-flash-latest` (an alias Google keeps pointed at
+  its current recommended flash model) had separate, workable headroom, so `LLM_MODEL`
+  defaults to that instead. `LLM_MODEL` is an env var precisely so this can be
+  repointed without a code change as availability shifts.

@@ -1,0 +1,524 @@
+{
+  "document_name": "Consolidated Balance Sheet 2021.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "overall_confidence": 0.8697,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "statement_title": {
+      "value": "Consolidated Balance Sheet",
+      "confidence": 0.9027,
+      "page_number": 1,
+      "source_text": "Consolidated Balance Sheet",
+      "grounded": null
+    },
+    "entity_name": {
+      "value": null,
+      "confidence": 0.0,
+      "page_number": null,
+      "source_text": null,
+      "grounded": null
+    },
+    "period_end": {
+      "value": "2021-03-31",
+      "confidence": 0.9027,
+      "page_number": 1,
+      "source_text": "As at March 31, 2021",
+      "grounded": null
+    },
+    "currency": {
+      "value": "INR",
+      "confidence": 0.9027,
+      "page_number": 1,
+      "source_text": "\u20b9 in '000",
+      "grounded": null
+    },
+    "units": {
+      "value": "'000",
+      "confidence": 0.9027,
+      "page_number": 1,
+      "source_text": "in '000",
+      "grounded": null
+    },
+    "periods": [
+      "As at 31-Mar-21",
+      "As at 31-Mar-20"
+    ],
+    "line_items": [
+      {
+        "label": "Capital",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 5512776.0,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Capital 1 5,512,776 5,483,286",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 5483286.0,
+            "confidence": 0.94,
+            "page_number": 1,
+            "source_text": "Capital 1 5,512,776 5,483,286",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Capital 1 5,512,776 5,483,286"
+      },
+      {
+        "label": "Reserves and surplus",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 2092589110.0,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 2,092,589,110 1,758,103,766",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 1758103766.0,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Reserves and surplus 2 2,092,589,110 1,758,103,766",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Reserves and surplus 2 2,092,589,110 1,758,103,766"
+      },
+      {
+        "label": "Minority interest",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 6327647.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 6,327,647 5,766,413",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 5766413.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Minority interest 2A 6,327,647 5,766,413",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Minority interest 2A 6,327,647 5,766,413"
+      },
+      {
+        "label": "Deposits",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 13337208758.0,
+            "confidence": 0.3159,
+            "page_number": 1,
+            "source_text": "Deposits 3 13,337,208,758 11,462,071,336",
+            "grounded": false
+          },
+          "As at 31-Mar-20": {
+            "value": 11462071336.0,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Deposits 3 13,337,208,758 11,462,071,336",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Deposits 3 13,337,208,758 11,462,071,336"
+      },
+      {
+        "label": "Borrowings",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 1776967487.0,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Borrowings 4 1,776,967,487 1,868,343,231",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 1868343231.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Borrowings 4 1,776,967,487 1,868,343,231",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Borrowings 4 1,776,967,487 1,868,343,231"
+      },
+      {
+        "label": "Other liabilities and provisions",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 776460664.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 776,460,664 708,536,341",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 708536341.0,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Other liabilities and provisions 5 776,460,664 708,536,341",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other liabilities and provisions 5 776,460,664 708,536,341"
+      },
+      {
+        "label": "Total",
+        "section": "CAPITAL AND LIABILITIES",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 17995066442.0,
+            "confidence": 0.3159,
+            "page_number": 1,
+            "source_text": "Total 17,995,066,442 15,808,304,373",
+            "grounded": false
+          },
+          "As at 31-Mar-20": {
+            "value": 15808304373.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Total 17,995,066,442 15,808,304,373",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 17,995,066,442 15,808,304,373"
+      },
+      {
+        "label": "Cash and balances with Reserve Bank of India",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 973703555.0,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 973,703,555 722,110,033",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 722110033.0,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Cash and balances with Reserve Bank of India 6 973,703,555 722,110,033",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Cash and balances with Reserve Bank of India 6 973,703,555 722,110,033"
+      },
+      {
+        "label": "Balances with banks and money at call and short notice",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 239021709.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 239,021,709 157,291,086",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 157291086.0,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Balances with banks and money at call and short notice 7 239,021,709 157,291,086",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Balances with banks and money at call and short notice 7 239,021,709 157,291,086"
+      },
+      {
+        "label": "Investments",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 4388231117.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Investments 8 4,388,231,117 3,893,049,519",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 3893049519.0,
+            "confidence": 0.89,
+            "page_number": 1,
+            "source_text": "Investments 8 4,388,231,117 3,893,049,519",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Investments 8 4,388,231,117 3,893,049,519"
+      },
+      {
+        "label": "Advances",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 11852835198.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Advances 9 11,852,835,198 10,436,708,771",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 10436708771.0,
+            "confidence": 0.86,
+            "page_number": 1,
+            "source_text": "Advances 9 11,852,835,198 10,436,708,771",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Advances 9 11,852,835,198 10,436,708,771"
+      },
+      {
+        "label": "Fixed assets",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 50995631.0,
+            "confidence": 0.95,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 50,995,631 46,268,558",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 46268558.0,
+            "confidence": 0.71,
+            "page_number": 1,
+            "source_text": "Fixed assets 10 50,995,631 46,268,558",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Fixed assets 10 50,995,631 46,268,558"
+      },
+      {
+        "label": "Other assets",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 490279232.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Other assets 11 490,279,232 552,876,406",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 552876406.0,
+            "confidence": 0.92,
+            "page_number": 1,
+            "source_text": "Other assets 11 490,279,232 552,876,406",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Other assets 11 490,279,232 552,876,406"
+      },
+      {
+        "label": "Total",
+        "section": "ASSETS",
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 17995066442.0,
+            "confidence": 0.3159,
+            "page_number": 1,
+            "source_text": "Total 17,995,066,442 15,808,304,373",
+            "grounded": false
+          },
+          "As at 31-Mar-20": {
+            "value": 15808304373.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Total 17,995,066,442 15,808,304,373",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Total 17,995,066,442 15,808,304,373"
+      },
+      {
+        "label": "Contingent liabilities",
+        "section": null,
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 9752806592.0,
+            "confidence": 0.44,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 9,752,806,592 11,304,740,615",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 11304740615.0,
+            "confidence": 0.91,
+            "page_number": 1,
+            "source_text": "Contingent liabilities 12 9,752,806,592 11,304,740,615",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Contingent liabilities 12 9,752,806,592 11,304,740,615"
+      },
+      {
+        "label": "Bills for collection",
+        "section": null,
+        "values": {
+          "As at 31-Mar-21": {
+            "value": 447481440.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Bills for collection 447,481,440 515,849,020",
+            "grounded": true
+          },
+          "As at 31-Mar-20": {
+            "value": 515849020.0,
+            "confidence": 0.96,
+            "page_number": 1,
+            "source_text": "Bills for collection 447,481,440 515,849,020",
+            "grounded": true
+          }
+        },
+        "page_number": 1,
+        "source_text": "Bills for collection 447,481,440 515,849,020"
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "balance_sheet_totals_check[As at 31-Mar-21]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 17995066442.0
+        },
+        "calculated_value": 17995066442.0,
+        "reported_value": 17995066442.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[As at 31-Mar-21]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 5512776.0,
+          "Reserves and surplus": 2092589110.0,
+          "Minority interest": 6327647.0,
+          "Deposits": 13337208758.0,
+          "Borrowings": 1776967487.0,
+          "Other liabilities and provisions": 776460664.0
+        },
+        "calculated_value": 17995066442.0,
+        "reported_value": 17995066442.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[As at 31-Mar-21]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 973703555.0,
+          "Balances with banks and money at call and short notice": 239021709.0,
+          "Investments": 4388231117.0,
+          "Advances": 11852835198.0,
+          "Fixed assets": 50995631.0,
+          "Other assets": 490279232.0
+        },
+        "calculated_value": 17995066442.0,
+        "reported_value": 17995066442.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_totals_check[As at 31-Mar-20]",
+        "formula": "total_capital_and_liabilities - total_assets",
+        "operands": {
+          "total_capital_and_liabilities": 15808304373.0
+        },
+        "calculated_value": 15808304373.0,
+        "reported_value": 15808304373.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_liabilities_components_check[As at 31-Mar-20]",
+        "formula": "sum(liability components)",
+        "operands": {
+          "Capital": 5483286.0,
+          "Reserves and surplus": 1758103766.0,
+          "Minority interest": 5766413.0,
+          "Deposits": 11462071336.0,
+          "Borrowings": 1868343231.0,
+          "Other liabilities and provisions": 708536341.0
+        },
+        "calculated_value": 15808304373.0,
+        "reported_value": 15808304373.0,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "balance_sheet_assets_components_check[As at 31-Mar-20]",
+        "formula": "sum(asset components)",
+        "operands": {
+          "Cash and balances with Reserve Bank of India": 722110033.0,
+          "Balances with banks and money at call and short notice": 157291086.0,
+          "Investments": 3893049519.0,
+          "Advances": 10436708771.0,
+          "Fixed assets": 46268558.0,
+          "Other assets": 552876406.0
+        },
+        "calculated_value": 15808304373.0,
+        "reported_value": 15808304373.0,
+        "variance": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": [
+      {
+        "type": "ungrounded_value",
+        "field": "Deposits[As at 31-Mar-21]",
+        "message": "Value '13337208758.0' for Deposits (As at 31-Mar-21) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Total[As at 31-Mar-21]",
+        "message": "Value '17995066442.0' for Total (As at 31-Mar-21) was not found in the source text."
+      },
+      {
+        "type": "ungrounded_value",
+        "field": "Total[As at 31-Mar-21]",
+        "message": "Value '17995066442.0' for Total (As at 31-Mar-21) was not found in the source text."
+      }
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "ocr_engine": "tesseract",
+    "llm_model": "gemini-3.6-flash",
+    "text_source": "rendered_ocr",
+    "processed_at": "2026-09-11T09:07:20Z",
+    "processing_time_ms": 27982
+  }
+}

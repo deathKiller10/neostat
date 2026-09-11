@@ -62,6 +62,7 @@ def main() -> None:
         "--skip-existing", action="store_true", help="Skip files that already have a JSON output."
     )
     args = parser.parse_args()
+    sys.stdout.reconfigure(line_buffering=True)
 
     settings = get_settings()
     delay_seconds = args.delay if args.delay is not None else settings.sample_run_delay_seconds
