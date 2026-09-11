@@ -51,7 +51,14 @@ class GeminiLLMProvider(LLMProvider):
     """
 
     def __init__(self, api_key: str, model: str):
-        self.client = Client(api_key=api_key)
+        # The SDK retries 429/5xx internally by default (5 attempts, up to 60s delay
+        # each) *underneath* our own retry loop below, which turns "capped retries"
+        # into an effectively uncapped, multi-minute hang under sustained rate
+        # limiting. Disabling it here makes our backoff the only retry layer.
+        http_options = types.HttpOptions(
+            timeout=30_000, retry_options=types.HttpRetryOptions(attempts=1)
+        )
+        self.client = Client(api_key=api_key, http_options=http_options)
         self.model = model
 
     def generate_structured(self, prompt: str, image: Image.Image, schema: type[BaseModel]) -> BaseModel:
